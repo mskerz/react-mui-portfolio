@@ -9,6 +9,7 @@ function Contact() {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -50 }}
       transition={{ duration: 0.3 }}
+      
     >
       <Typography variant="h2" component="h1" gutterBottom>
         Contact Me
