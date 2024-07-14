@@ -1,8 +1,7 @@
-import React from 'react';
 import { Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import ProfileImage from '../assets/avatar.jpg'; // Ensure this path is correct
 
+import { motion } from 'framer-motion'
 
 // Create a theme instance
 
@@ -24,7 +23,10 @@ function About() {
     const classes = useStyles();
 
     return (
-        <>
+        <motion.div key="about" initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -50 }}
+            transition={{ duration: 0.3 }}>
             <Typography variant="h2" component="h1" gutterBottom>
                 About Me
             </Typography>
@@ -32,10 +34,9 @@ function About() {
                 <Typography variant="body1" style={{ wordWrap: 'break-word' }}>
                     &nbsp; &nbsp;I am a 4th year student studying in Computer Science, looking for a cooperative education placement as a Frontend Developer or Backend Developer. I’m enthusiastic and ready to learn new things, and I aim to apply the skills and knowledge I&apos;ve learned to real-world work.
                 </Typography>
-                <img src={ProfileImage} alt="Profile" className={classes.image} />
 
             </div>
-        </>
+        </motion.div>
     );
 }
 
