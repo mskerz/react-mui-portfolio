@@ -38,7 +38,7 @@ function Home() {
                 <Typography variant="h2" component="h1" gutterBottom>
                   Wichasin <span style={{ color: '#FF9900' }}>Sutthiarj</span>          </Typography>
                 <Typography variant="p" style={{fontSize:25}} >
-                  I be Frontend Developer Intern
+                  I&apos;ll be Frontend Developer Intern
                 </Typography>
               </div>
               <img src={ProfileImage} alt="Profile" className={classes.image} />
