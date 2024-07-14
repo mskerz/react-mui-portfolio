@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Container, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import ProfileImage from '../assets/avatar.jpg'; // Ensure this path is correct
 import { makeStyles } from "@mui/styles";
@@ -31,17 +31,20 @@ function Home() {
       exit={{ opacity: 0, y: -50 }}
       transition={{ duration: 0.3 }}
     >
-      <div className={classes.root}>
-        
-        <div>
-          <Typography variant="h2" component="h1" gutterBottom>
-            Wichasin <span style={{ color: '#FF9900' }}>Sutthiarj</span>          </Typography>
-          <Typography variant="p" style={{fontSize:25}} >
-            I&apos;m Frontend Developer Intern
-          </Typography>
-        </div>
-        <img src={ProfileImage} alt="Profile" className={classes.image} />
-      </div>
+      <Container maxWidth="md">
+            <div className={classes.root} >
+              
+              <div>
+                <Typography variant="h2" component="h1" gutterBottom>
+                  Wichasin <span style={{ color: '#FF9900' }}>Sutthiarj</span>          </Typography>
+                <Typography variant="p" style={{fontSize:25}} >
+                  I be Frontend Developer Intern
+                </Typography>
+              </div>
+              <img src={ProfileImage} alt="Profile" className={classes.image} />
+            </div>
+      </Container>
+
       
     </motion.div>
   );

@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Container, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 
 function Contact() {
@@ -11,12 +11,15 @@ function Contact() {
       transition={{ duration: 0.3 }}
       
     >
-      <Typography variant="h2" component="h1" gutterBottom>
-        Contact Me
-      </Typography>
-      <Typography variant="body1">
-        This is where you can put your contact information.
-      </Typography>
+      <Container maxWidth="md">
+          <Typography variant="h2" component="h1" gutterBottom>
+            Contact Me
+          </Typography>
+          <Typography variant="body1">
+            This is where you can put your contact information.
+          </Typography>
+      </Container>
+
     </motion.div>
   );
 }
