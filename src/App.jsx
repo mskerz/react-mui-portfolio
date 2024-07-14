@@ -1,26 +1,61 @@
 import React from 'react';
-import { Container, Typography, AppBar, Toolbar, Button } from '@mui/material';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Container, Typography ,Box} from '@mui/material';
+import Navbar from './components/Navbar';
 
-function App() {
+function Home() {
   return (
-    <Container>
-      <AppBar position="static">
-        <Toolbar>
-          <Typography variant="h6">
-            My Portfolio
-          </Typography>
-        </Toolbar>
-      </AppBar>
+    <div>
       <Typography variant="h2" component="h1" gutterBottom>
         Welcome to My Portfolio
       </Typography>
       <Typography variant="body1">
         This is where you can put an introduction about yourself.
       </Typography>
-      <Button variant="contained" color="primary">
+    </div>
+  );
+}
+
+function About() {
+  return (
+    <div>
+      <Typography variant="h2" component="h1" gutterBottom>
+        About Me
+      </Typography>
+      <Typography variant="body1">
+        This is where you can put information about yourself.
+      </Typography>
+    </div>
+  );
+}
+
+function Contact() {
+  return (
+    <div style={{marginTop:0}}>
+      <Typography variant="h2" component="h1" gutterBottom>
         Contact Me
-      </Button>
-    </Container>
+      </Typography>
+      <Typography variant="body1">
+        This is where you can put your contact information.
+      </Typography>
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Navbar />
+      <Container>
+        <Box mt={10}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </Box>
+      </Container>
+    </Router>
   );
 }
 
