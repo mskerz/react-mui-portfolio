@@ -2,7 +2,7 @@ import { Container, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import ProfileImage from '../assets/avatar.jpg'; // Ensure this path is correct
 import { makeStyles } from "@mui/styles";
-
+import { ReactTyped } from "react-typed";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -38,7 +38,12 @@ function Home() {
                 <Typography variant="h2" component="h1" gutterBottom>
                   Wichasin <span style={{ color: '#FF9900' }}>Sutthiarj</span>          </Typography>
                 <Typography variant="p" style={{fontSize:25}} >
-                  I&apos;ll be Frontend Developer Intern
+                  <ReactTyped 
+                      strings={["I'm Frontend Developer Intern"]}
+                      typeSpeed={150}
+                      backSpeed={100}
+                      loop
+                   />
                 </Typography>
               </div>
               <img src={ProfileImage} alt="Profile" className={classes.image} />

@@ -23,7 +23,7 @@ function Navbar() {
         <AppBar position="static" color="warning"  sx={{ color: 'white'  }} >
             <Toolbar variant='dense' sx={{ display: 'flex', justifyContent: 'space-evenly' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                    <Typography variant="h6" component="div">
+                    <Typography variant="h4" component="div">
                         Portfolio
                     </Typography>
                 </div>
