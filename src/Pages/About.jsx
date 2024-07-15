@@ -1,5 +1,4 @@
 import { Typography, Container, Box, Grid, Stack } from '@mui/material';
-import { motion } from 'framer-motion';
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaAngular, FaBootstrap, FaLaravel } from 'react-icons/fa';
 import { SiFastapi,SiFlutter,SiDocker } from 'react-icons/si';
 
@@ -19,13 +18,7 @@ function About() {
     ];
 
     return (
-        <motion.div
-            key="about"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -50 }}
-            transition={{ duration: 0.3 }}
-        >
+        <div>
             <Container maxWidth="md">
                 <Typography variant="h2" component="h1" gutterBottom>
                     Hi! I&apos;m Wichasin S.
@@ -51,7 +44,7 @@ function About() {
                     </Grid>
                 </Box>
             </Container>
-        </motion.div>
+        </div>
     );
 }
 

@@ -1,5 +1,4 @@
 import { Container, Typography } from "@mui/material";
-import { motion } from "framer-motion";
 import ProfileImage from '../assets/avatar.jpg'; // Ensure this path is correct
 import { makeStyles } from "@mui/styles";
 import { ReactTyped } from "react-typed";
@@ -24,13 +23,7 @@ function Home() {
   const classes = useStyles();
 
   return (
-    <motion.div
-      key="home"
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -50 }}
-      transition={{ duration: 0.3 }}
-    >
+    <div>
       <Container maxWidth="md">
             <div className={classes.root} >
               
@@ -51,7 +44,7 @@ function Home() {
       </Container>
 
       
-    </motion.div>
+    </div>
   );
 }
 export default Home;

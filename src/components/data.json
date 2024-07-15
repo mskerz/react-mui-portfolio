@@ -1,0 +1,46 @@
+[
+    {
+        "projectName": "Thesis Search of Computer Science's Student",
+        "type": "Graduate Project",
+        "subject": "Computer Science Project",
+        "detail": {
+            "tools": ["Flutter", "Laravel"],
+            "summary": "Designed and developed an article app (mobile app) with Flutter and Rest API with Laravel MySQL.",
+            "database": ["MySQL"]
+        },
+        "source": ""
+    },
+    {
+        "projectName": "Article Mobile App",
+        "type": "Class Project",
+        "subject": "Mobile Application Design and Development",
+        "detail": {
+            "tools": ["Flutter", "Laravel"],
+            "summary": "Designed and developed an article app (mobile app) with Flutter and Rest API with Laravel MySQL.",
+            "database": ["MySQL"]
+        },
+        "source": "https://github.com/mskerz/content_manage_apps"
+    },
+    {
+        "projectName": "Lotttery Buy-sell Web App",
+        "type": "Class Project",
+        "subject": "Web Technology and Web Service",
+        "detail": {
+            "tools": ["Angular", "Slim"],
+            "summary": "Designed and developed a lottery buy-sale web application with Angular and Slim framework and MySQL.",
+            "database": ["MySQL"]
+        },
+        "source": "https://github.com/mskerz/content_manage_apps"
+    },
+    {
+        "projectName": "Admissions Web Application for undergraduate",
+        "type": "Class Project",
+        "subject": "Web Technology and Web Service",
+        "detail": {
+            "tools": ["HTML", "CSS", "JavaScript", "PHP"],
+            "summary": "Designed and developed an admissions web application for undergraduate at Kasetsart University Chalermphrakiat Sakon Nakhon Province Campus with HTML, CSS, Javascript, Jquery, PHP, MySQL.",
+            "database": ["MySQL"]
+        },
+        "source": ""
+    }
+]

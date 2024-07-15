@@ -21,16 +21,18 @@ function Navbar() {
 
     return (
         <AppBar position="static" color="warning"  sx={{ color: 'white'  }} >
-            <Toolbar variant='dense' sx={{ display: 'flex', justifyContent: 'space-evenly' }}>
+            <Toolbar variant='dense' sx={{ display: 'flex', justifyContent: 'space-around' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                     <Typography variant="h4" component="div">
                         Portfolio
                     </Typography>
                 </div>
                 <Tabs value={value} onChange={handleChange} aria-label='navigation tabs'>
-                    <Tab label="Home" value="/" color="secondary" component={Link} to="/" sx={{ color: 'white', marginRight: '20px' }} />
-                    <Tab label="About" value="/about" color="primary" component={Link} to="/about" sx={{ color: 'white', marginRight: '20px' }} />
-                    <Tab label="Contact" value="/contact" color="primary" component={Link} to="/contact" sx={{ color: 'white', marginRight: '20px' }} />
+                    <Tab label="Home" value="/" color="secondary" component={Link} to="/" sx={{ color: 'white' }} />
+                    <Tab label="About" value="/about" color="primary" component={Link} to="/about" sx={{ color: 'white'}} />
+                    <Tab label="Contact" value="/contact" color="primary" component={Link} to="/contact" sx={{ color: 'white' }} />
+                    <Tab label="Projects" value="/projects" color="primary" component={Link} to="/projects" sx={{ color: 'white' }} />
+
                 </Tabs>
             </Toolbar>
         </AppBar>

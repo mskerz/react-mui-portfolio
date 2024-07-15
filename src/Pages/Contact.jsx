@@ -1,16 +1,8 @@
 import { Container, Typography } from "@mui/material";
-import { motion } from "framer-motion";
 
 function Contact() {
   return (
-    <motion.div
-      key="contact"
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -50 }}
-      transition={{ duration: 0.3 }}
-      
-    >
+    <div>
       <Container maxWidth="md">
           <Typography variant="h2" component="h1" gutterBottom>
             Contact Me
@@ -20,7 +12,7 @@ function Contact() {
           </Typography>
       </Container>
 
-    </motion.div>
+    </div>
   );
 }
 export default Contact;
