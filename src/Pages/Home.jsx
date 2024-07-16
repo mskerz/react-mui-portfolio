@@ -28,7 +28,7 @@ function Home() {
                 <Typography  variant="h2" component="h1" gutterBottom sx={{marginTop:'100px'}} >
                   Wichasin <span style={{ color: '#00DFC0' }}>Sutthiarj</span>          
                 </Typography>
-                <Typography variant="p"  >
+                <Typography variant="p" sx={{fontSize:30}} >
                   <ReactTyped 
                       strings={["I'm Frontend Developer Intern"]}
                       typeSpeed={150}
