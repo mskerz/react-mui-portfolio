@@ -1,20 +1,17 @@
 import { Container, Typography } from "@mui/material";
-import ProfileImage from '../assets/avatar.jpg'; // Ensure this path is correct
+import Vector from '../assets/vector2.png'; // Ensure this path is correct
 import { makeStyles } from "@mui/styles";
 import { ReactTyped } from "react-typed";
-
-
 const useStyles = makeStyles((theme) => ({
   root: {
       display: 'flex',
       alignItems: 'center',
+      justifyContent: 'center', 
+      alignSelf: 'center',
       gap: theme.spacing(10), // Adjust the gap between image and text
   },
-  image: {
-      width: '180px',
-      height: '180px',
-      borderRadius: '50%', // Make the image circular
-      objectFit: 'cover', // Ensure the image fits and doesn't stretch
+  textContainer: {
+    textAlign: 'left', // Center text horizontally
   },
 
 
@@ -23,14 +20,15 @@ function Home() {
   const classes = useStyles();
 
   return (
-    <div>
+    <div   >
       <Container maxWidth="md">
             <div className={classes.root} >
-              
-              <div>
-                <Typography variant="h2" component="h1" gutterBottom>
-                  Wichasin <span style={{ color: '#FF9900' }}>Sutthiarj</span>          </Typography>
-                <Typography variant="p" style={{fontSize:25}} >
+              <div style={{display:'flex',flex:'row',marginTop:100}}>
+              <div  className={classes.textContainer}>
+                <Typography  variant="h2" component="h1" gutterBottom sx={{marginTop:'100px'}} >
+                  Wichasin <span style={{ color: '#00DFC0' }}>Sutthiarj</span>          
+                </Typography>
+                <Typography variant="p"  >
                   <ReactTyped 
                       strings={["I'm Frontend Developer Intern"]}
                       typeSpeed={150}
@@ -39,7 +37,9 @@ function Home() {
                    />
                 </Typography>
               </div>
-              <img src={ProfileImage} alt="Profile" className={classes.image} />
+              <img src={Vector} alt="Profile" width={350} style={{marginLeft:'5px'}}  />
+              </div>
+
             </div>
       </Container>
 

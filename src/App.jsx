@@ -19,7 +19,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <Router>
         <Navbar />
-          <Box mt={10}>
+          <Box  sx={{ minHeight: '100vh', background: 'linear-gradient(81deg, rgba(0,0,0,1) 0%, rgba(1,56,48,1) 44%, rgba(0,0,0,1) 100%)' }}>
               <AnimatedRoutes/>
           </Box>
       </Router>

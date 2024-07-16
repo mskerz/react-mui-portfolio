@@ -1,10 +1,11 @@
 import React from 'react';
 import { Card, CardContent, Typography, List, ListItem, ListItemText, Link, useTheme } from '@mui/material';
+import { GitHub } from '@mui/icons-material';
 
 function Project({ project }) {
     const theme = useTheme();
     return (
-        <Card variant="outlined" sx={{ mb: 2, backgroundColor: theme.palette.background.paper }}>
+        <Card variant="outlined" sx={{ mb: 2,  }}>
             <CardContent>
                 <Typography variant="h6" component="div" sx={{ color: theme.palette.primary.main }}>
                     {project.projectName}
@@ -38,7 +39,7 @@ function Project({ project }) {
                 {project.source && (
                     <Typography variant="body2" component="div" sx={{ mt: 2 }}>
                         <Link href={project.source} target="_blank" rel="noopener noreferrer">
-                            Project Source
+                            <GitHub/>
                         </Link>
                     </Typography>
                 )}

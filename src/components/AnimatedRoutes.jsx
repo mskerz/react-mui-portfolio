@@ -15,7 +15,7 @@ function MotionWrapper({ children }) {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -50 }}
       transition={{ duration: 0.3 }}
-    >
+     >
       {children}
     </motion.div>
   );
@@ -26,7 +26,7 @@ function AnimatedRoutes() {
     <AnimatePresence initial={false} mode={'wait'} onExitComplete={()=>null}>
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<MotionWrapper><Home /></MotionWrapper>} />
-        <Route path="/about" element={<MotionWrapper><About /></MotionWrapper>} />
+        <Route path="/about" element={<MotionWrapper ><About /></MotionWrapper>} />
         <Route path="/contact" element={<MotionWrapper><Contact /></MotionWrapper>} />
         <Route path="/projects" element={<MotionWrapper><ProjectList /></MotionWrapper>} />
       </Routes>

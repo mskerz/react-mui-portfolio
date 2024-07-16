@@ -4,11 +4,11 @@
         "type": "Graduate Project",
         "subject": "Computer Science Project",
         "detail": {
-            "tools": ["Flutter", "Laravel"],
+            "tools": ["Angular", "FastAPI"],
             "summary": "Designed and developed an article app (mobile app) with Flutter and Rest API with Laravel MySQL.",
             "database": ["MySQL"]
         },
-        "source": ""
+        "source": "https://github.com/mskerz/thesis-search-project"
     },
     {
         "projectName": "Article Mobile App",
