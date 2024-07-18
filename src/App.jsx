@@ -3,7 +3,6 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { Box, createTheme, ThemeProvider } from '@mui/material';
 import Navbar from './components/Navbar';
 import AnimatedRoutes from './components/AnimatedRoutes';
-import Footer from './components/Footer';
 
 const theme = createTheme(); // Create a theme instance
 function App() {

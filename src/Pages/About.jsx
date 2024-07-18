@@ -1,8 +1,8 @@
 import { Typography, Container, Box, Grid, Stack, useMediaQuery } from '@mui/material';
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaAngular, FaBootstrap, FaLaravel } from 'react-icons/fa';
 import { SiFastapi, SiFlutter, SiDocker, SiMysql } from 'react-icons/si';
-import Avatar from '../assets/avatar.jpg'; // Ensure this path is correct
-import { AngularIcon, FlutterIcon, LaravelIcon, MySqlIcon } from '../assets/Icon';
+import Avatar from '../assets/image/avatar.jpg'; // Ensure this path is correct
+import { AngularIcon, FlutterIcon, LaravelIcon, MySqlIcon } from '../assets/icon';
 function About() {
 
     const isMobile = useMediaQuery((theme) => theme.breakpoints.down('sm'));
@@ -28,10 +28,10 @@ function About() {
 
                     <div style={{ display: 'inline-flex', flexDirection: "column"}}>
                         <Typography variant="h2" component="h1" gutterBottom>
-                            Hi! I&apos;m Wichasin S.
+                            Hi! I&apos;m Wichasin 
                         </Typography>
-                        <Typography variant="body1" paragraph>
-                            I am a 4th year student studying Computer Science, looking for a cooperative education placement as a Frontend Developer or Backend Developer. I’m enthusiastic and ready to learn new things, and I aim to apply the skills and knowledge I&apos;ve learned to real-world work.
+                        <Typography variant="body1" paragraph sx={{ textIndent: '1.5em' }}>
+                        I am a 4th year student studying Computer Science, looking for a cooperative education placement as a Frontend Developer or Backend Developer. I’m enthusiastic and ready to learn new things, and I aim to apply the skills and knowledge I&apos;ve learned to real-world work.
                         </Typography>
                     </div>
                     <img

@@ -7,7 +7,7 @@ function Navbar() {
     const location = useLocation();
     const [value, setValue] = useState(location.pathname);
     const [open, setOpen] = useState(false);
-    
+
     const theme = useTheme();
     const isMobilescreen = useMediaQuery(theme.breakpoints.down('md'))
     useEffect(() => {
@@ -42,7 +42,7 @@ function Navbar() {
                     </IconButton>
                 </Box>
                 <Box sx={{ display: { xs: 'none', md: 'block' } }}>
-                    <Tabs value={value} onChange={handleChange} aria-label='navigation tabs' TabIndicatorProps={{ style: { backgroundColor: '#00DFC0' } }}>
+                    <Tabs value={value} onChange={handleChange} aria-label='navigation tabs' TabIndicatorProps={{ style: { backgroundColor: '#00f496' } }}>
                         <Tab label="Home" value="/" component={Link} to="/" sx={{ color: 'white', '&.Mui-selected': { color: '#00DFC0' }, '&:hover': { color: '#00DFC0' } }} />
                         <Tab label="About" value="/about" component={Link} to="/about" sx={{ color: 'white', '&.Mui-selected': { color: '#00DFC0' }, '&:hover': { color: '#00DFC0' } }} />
                         <Tab label="Contact" value="/contact" component={Link} to="/contact" sx={{ color: 'white', '&.Mui-selected': { color: '#00DFC0' }, '&:hover': { color: '#00DFC0' } }} />
@@ -55,14 +55,15 @@ function Navbar() {
             </Toolbar>
             {isMobilescreen && (
                 <Collapse in={open} timeout="auto" unmountOnExit>
-                    <Tabs value={value} onChange={handleChange} aria-label='navigation tabs' orientation="vertical"  TabIndicatorProps={{ style: { backgroundColor: '#00DFC0' } }}>
-                        <Tab label="Home" value="/" component={Link} to="/" sx={{ color: 'white', '&.Mui-selected': { color: '#00DFC0' }, '&:hover': { color: '#00DFC0' } }} />
-                        <Tab label="About" value="/about" component={Link} to="/about" sx={{ color: 'white', '&.Mui-selected': { color: '#00DFC0' }, '&:hover': { color: '#00DFC0' } }} />
-                        <Tab label="Contact" value="/contact" component={Link} to="/contact" sx={{ color: 'white', '&.Mui-selected': { color: '#00DFC0' }, '&:hover': { color: '#00DFC0' } }} />
-                        <Tab label="Projects" value="/projects" component={Link} to="/projects" sx={{ color: 'white', '&.Mui-selected': { color: '#00DFC0' }, '&:hover': { color: '#00DFC0' } }} />
-                        <Tab label="Resume" value="/resume" component={Link} to="/resume" sx={{ color: 'white', '&.Mui-selected': { color: '#00DFC0' }, '&:hover': { color: '#00DFC0' } }} />
-
-                    </Tabs>
+                    <Box sx={{ display:'grid', flexDirection: 'row-reverse', alignItems: 'center', backgroundColor: 'black' }}>
+                        <Tabs value={value} onChange={handleChange} aria-label='navigation tabs' orientation="vertical" TabIndicatorProps={{ style: { backgroundColor: '#00DFC0'} }}>
+                            <Tab label="Home" value="/" component={Link} to="/" sx={{ color: 'white', '&.Mui-selected': { color: '#00DFC0' }, '&:hover': { color: '#00DFC0' } }} />
+                            <Tab label="About" value="/about" component={Link} to="/about" sx={{ color: 'white', '&.Mui-selected': { color: '#00DFC0' }, '&:hover': { color: '#00DFC0' } }} />
+                            <Tab label="Contact" value="/contact" component={Link} to="/contact" sx={{ color: 'white', '&.Mui-selected': { color: '#00DFC0' }, '&:hover': { color: '#00DFC0' } }} />
+                            <Tab label="Projects" value="/projects" component={Link} to="/projects" sx={{ color: 'white', '&.Mui-selected': { color: '#00DFC0' }, '&:hover': { color: '#00DFC0' } }} />
+                            <Tab label="Resume" value="/resume" component={Link} to="/resume" sx={{ color: 'white', '&.Mui-selected': { color: '#00DFC0' }, '&:hover': { color: '#00DFC0' } }} />
+                        </Tabs>
+                    </Box>
                 </Collapse>
             )}
         </AppBar>

@@ -3,7 +3,7 @@ import { makeStyles } from "@mui/styles";
 import { ReactTyped } from "react-typed";
 import { Button } from '@mui/material';
 import { Link } from 'react-router-dom';
-
+import Hello from '../assets/image/Hello.gif'
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
@@ -34,20 +34,20 @@ function Home() {
             <div className={classes.textContainer}>
 
               <Typography variant="h2" component="h3" gutterBottom sx={{ marginTop: isMobile ? '20px' : '50px', fontWeight: 'bold' }}>
-                {/* <div style={{fontSize:25,color:"#00ff87"}}>Hey</div> */}
-                I&apos;m Wichasin <span style={{ color: '#00DFC0' }}>Sutthiarj</span>
+                <div style={{fontSize:25,color:"#00ff87"}}>Hi <img src={Hello} alt="Hello" width="25px"/>, I'm</div>
+                Wichasin  Sutthiarj
               </Typography>
               <Typography variant="p" sx={{ fontSize: 30 }}>
                 <ReactTyped
-                  strings={["Software Engineer & Frontend Developer", "Fullstack Developer"]}
-                  typeSpeed={150}
+                  strings={["Software Engineer","Frontend Developer", "Fullstack Developer"]}
+                  typeSpeed={160}
                   backSpeed={100}
                   loop
                 />
 
               </Typography>
               <div >
-                <Button component={Link} to="/resume" variant="contained"  color="primary" sx={{ color: "black", backgroundColor: '#FFF',marginTop:3, p:1.5, borderRadius:6, '&:hover': { color: 'white', backgroundColor: "#00DFE0" } }}>
+                <Button component={Link} to="/resume" variant="contained"   color="primary" sx={{ color: "black", backgroundColor: '#00f496',marginTop:3, p:1.5,paddingLeft:4,paddingRight:4, borderRadius:6, '&:hover': { color: 'black', backgroundColor: "#00e08a" } }}>
                   Resume
                 </Button>
               </div>
