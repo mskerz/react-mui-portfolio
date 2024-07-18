@@ -16,6 +16,13 @@ module.exports = {
     "react/jsx-uses-react": "error",   
     "react/jsx-uses-vars": "error" ,
     'react/jsx-no-target-blank': 'off',
+    "no-unused-vars": ["error", {
+      "vars": "all",
+      "args": "after-used",
+      "caughtErrors": "all",
+      "ignoreRestSiblings": false,
+      "reportUsedIgnorePattern": false
+  }],
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },

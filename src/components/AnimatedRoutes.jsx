@@ -4,8 +4,8 @@ import Home from '../Pages/Home';
 import About from '../Pages/About';
 import Contact from '../Pages/Contact';
 import { AnimatePresence,motion} from 'framer-motion'
-import ProjectList from './ProjectList';
-
+import ProjectList from '../Pages/ProjectList';
+import Resume from '../Pages/Resume';
 
 function MotionWrapper({ children }) {
   return (
@@ -29,6 +29,7 @@ function AnimatedRoutes() {
         <Route path="/about" element={<MotionWrapper ><About /></MotionWrapper>} />
         <Route path="/contact" element={<MotionWrapper><Contact /></MotionWrapper>} />
         <Route path="/projects" element={<MotionWrapper><ProjectList /></MotionWrapper>} />
+        <Route path="/resume" element={<MotionWrapper><Resume /></MotionWrapper>}/>
       </Routes>
     </AnimatePresence>
   )

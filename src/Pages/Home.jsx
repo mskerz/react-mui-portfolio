@@ -1,5 +1,4 @@
 import { Container, Typography, useMediaQuery } from "@mui/material";
-import Vector from '../assets/vector2.png'; // Ensure this path is correct
 import { makeStyles } from "@mui/styles";
 import { ReactTyped } from "react-typed";
 import { Button } from '@mui/material';
@@ -29,28 +28,34 @@ function Home() {
 
   return (
     <div>
-      <Container maxWidth="md">
+      <Container >
         <div className={classes.root}>
           <div style={{ display: 'flex', flexDirection: isMobile ? 'column-reverse' : 'row', alignItems: 'center', marginTop: 100 }}>
             <div className={classes.textContainer}>
-              <Typography variant="h2" component="h1" gutterBottom sx={{ marginTop: isMobile ? '20px' : '100px' }}>
-                Wichasin <span style={{ color: '#00DFC0' }}>Sutthiarj</span>
+
+              <Typography variant="h2" component="h3" gutterBottom sx={{ marginTop: isMobile ? '20px' : '50px', fontWeight: 'bold' }}>
+                {/* <div style={{fontSize:25,color:"#00ff87"}}>Hey</div> */}
+                I&apos;m Wichasin <span style={{ color: '#00DFC0' }}>Sutthiarj</span>
               </Typography>
               <Typography variant="p" sx={{ fontSize: 30 }}>
                 <ReactTyped
-                  strings={["I'm Developer","I like Technology"]}
+                  strings={["Software Engineer & Frontend Developer", "Fullstack Developer"]}
                   typeSpeed={150}
                   backSpeed={100}
                   loop
                 />
+
               </Typography>
+              <div >
+                <Button component={Link} to="/resume" variant="contained"  color="primary" sx={{ color: "black", backgroundColor: '#FFF',marginTop:3, p:1.5, borderRadius:6, '&:hover': { color: 'white', backgroundColor: "#00DFE0" } }}>
+                  Resume
+                </Button>
+              </div>
             </div>
-            <img src={Vector} alt="Profile" width={isMobile ? 250 : 350} style={{ marginLeft: isMobile ? '0px' : '5px', marginBottom: isMobile ? '20px' : '0px' }} />
+            {/* <img src={Vector} alt="Profile" width={isMobile ? 250 : 350} style={{ marginLeft: isMobile ? '0px' : '5px', marginBottom: isMobile ? '20px' : '0px' }} /> */}
           </div>
         </div>
-        <Button component={Link} to="/contact" variant="contained" color="primary" sx={{ color: "black", backgroundColor: '#FFF', '&:hover': { color: 'white', backgroundColor: "#00DFC0" } }}>
-          Contact Me
-        </Button>
+
       </Container>
     </div>
   );

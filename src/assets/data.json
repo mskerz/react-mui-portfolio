@@ -4,7 +4,7 @@
         "type": "Graduate Project",
         "subject": "Computer Science Project",
         "detail": {
-            "tools": ["Angular", "FastAPI"],
+            "tools": ["Angular", "FastAPI","Python"],
             "summary": "Designed and developed an article app (mobile app) with Flutter and Rest API with Laravel MySQL.",
             "database": ["MySQL"]
         },
@@ -44,3 +44,5 @@
         "source": ""
     }
 ]
+
+ 

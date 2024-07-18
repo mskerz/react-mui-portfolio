@@ -47,6 +47,8 @@ function Navbar() {
                         <Tab label="About" value="/about" component={Link} to="/about" sx={{ color: 'white', '&.Mui-selected': { color: '#00DFC0' }, '&:hover': { color: '#00DFC0' } }} />
                         <Tab label="Contact" value="/contact" component={Link} to="/contact" sx={{ color: 'white', '&.Mui-selected': { color: '#00DFC0' }, '&:hover': { color: '#00DFC0' } }} />
                         <Tab label="Projects" value="/projects" component={Link} to="/projects" sx={{ color: 'white', '&.Mui-selected': { color: '#00DFC0' }, '&:hover': { color: '#00DFC0' } }} />
+                        <Tab label="Resume" value="/resume" component={Link} to="/resume" sx={{ color: 'white', '&.Mui-selected': { color: '#00DFC0' }, '&:hover': { color: '#00DFC0' } }} />
+
                     </Tabs>
                 </Box>
 
@@ -58,6 +60,8 @@ function Navbar() {
                         <Tab label="About" value="/about" component={Link} to="/about" sx={{ color: 'white', '&.Mui-selected': { color: '#00DFC0' }, '&:hover': { color: '#00DFC0' } }} />
                         <Tab label="Contact" value="/contact" component={Link} to="/contact" sx={{ color: 'white', '&.Mui-selected': { color: '#00DFC0' }, '&:hover': { color: '#00DFC0' } }} />
                         <Tab label="Projects" value="/projects" component={Link} to="/projects" sx={{ color: 'white', '&.Mui-selected': { color: '#00DFC0' }, '&:hover': { color: '#00DFC0' } }} />
+                        <Tab label="Resume" value="/resume" component={Link} to="/resume" sx={{ color: 'white', '&.Mui-selected': { color: '#00DFC0' }, '&:hover': { color: '#00DFC0' } }} />
+
                     </Tabs>
                 </Collapse>
             )}
