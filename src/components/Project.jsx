@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, CardContent, Typography, List, ListItem, Link, useTheme, Box } from '@mui/material';
 import { GitHub } from '@mui/icons-material';
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaAngular, FaBootstrap, FaLaravel } from 'react-icons/fa';
-import { SiFastapi, SiFlutter, SiDocker, SiPhp,} from 'react-icons/si';
+import {  SiDocker, SiPhp,} from 'react-icons/si';
 import { FlutterIcon, AngularIcon, SlimIcon, MySqlIcon, PythonIcon,FastapiIcon } from '../assets/icon';
 
 const skillIcons = {
@@ -26,7 +26,7 @@ function Project({ project }) {
     const theme = useTheme();
 
     return (
-        <Card variant="outlined" sx={{ mb: 2, position: 'relative', height: { xs: 'auto', md: '300px' }, width: '100%', display: 'flex', flexDirection: 'column', backgroundColor: 'rgba(255, 255, 255, 0.78)' }}>
+        <Card variant="outlined" sx={{ mb: 2, position: 'relative', height: { xs: 'auto', md: '300px' }, width: '100%', display: 'flex', flexDirection: 'column',  }}>
             {project.source && (
                 <Box sx={{ position: 'absolute', top: 0, right: 0, p: 1 }}>
                     <Link href={project.source} target="_blank" rel="noopener noreferrer">

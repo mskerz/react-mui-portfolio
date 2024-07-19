@@ -1,32 +1,12 @@
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { ThemeProvider, useTheme } from '@mui/material';
 import { TextField, Container, Typography, Box, Button } from '@mui/material';
 
 // สร้างธีมใหม่โดยการเปลี่ยนแปลงสี outline และสีพื้นหลังของ TextField
-const theme = createTheme({
-  components: {
-    MuiTextField: {
-      styleOverrides: {
-        root: {
-          '& .MuiOutlinedInput-root': {
-            backgroundColor: 'rgba(255, 255, 255, 0.5)', // สีพื้นหลังแบบโปร่งใส 50%
-            '& fieldset': {
-              borderColor: '#00DFC0', // สี outline ที่ไม่ได้ focus
-            },
-            '&:hover fieldset': {
-              borderColor: '#00DFC0', // สี outline ขณะ hover
-            },
-            '&.Mui-focused fieldset': {
-              borderColor: '#00DFC0', // สี outline เมื่อมีการ focus
-            },
-          },
-        },
-      },
-    },
-  },
-});
+
 
 // ใช้ ThemeProvider รอบ TextField เพื่อใช้ธีมที่กำหนดไว้
 function Contact() {
+  const theme = useTheme()
   return (
     <ThemeProvider theme={theme}>
       <Container maxWidth="md">
@@ -39,7 +19,7 @@ function Contact() {
             height: '100vh',
           }}
         >
-          <Typography variant="h2" component="h1" gutterBottom>
+          <Typography variant="h2" component="h1" color={theme.palette.text.primary} gutterBottom>
             Contact Me
           </Typography>
           <Box
@@ -86,7 +66,7 @@ function Contact() {
                   type="submit"
 
                   variant="contained"
-                  sx={{ mt: 3, mb: 2, color: "black", backgroundColor: '#00DFC0', '&:hover': {  backgroundColor: "#fff" } }}
+                  sx={{ mt: 3, mb: 2, color: theme.palette.mode.dark, backgroundColor:theme.palette.primary.main, '&:hover': {  backgroundColor: theme.palette.secondary.main } }}
                 >
                   Send Message
                 </Button>

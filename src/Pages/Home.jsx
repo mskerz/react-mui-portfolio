@@ -1,4 +1,4 @@
-import { Container, Typography, useMediaQuery } from "@mui/material";
+import { Container, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { ReactTyped } from "react-typed";
 import { Button } from '@mui/material';
@@ -24,6 +24,8 @@ const useStyles = makeStyles((theme) => ({
 
 function Home() {
   const classes = useStyles();
+  const theme = useTheme();
+
   const isMobile = useMediaQuery((theme) => theme.breakpoints.down('sm'));
 
   return (
@@ -33,13 +35,13 @@ function Home() {
           <div style={{ display: 'flex', flexDirection: isMobile ? 'column-reverse' : 'row', alignItems: 'center', marginTop: 100 }}>
             <div className={classes.textContainer}>
 
-              <Typography variant="h2" component="h3" gutterBottom sx={{ marginTop: isMobile ? '20px' : '50px', fontWeight: 'bold' }}>
-                <div style={{fontSize:25,color:"#00ff87"}}>Hi <img src={Hello} alt="Hello" width="25px"/>, I'm</div>
+              <Typography variant="h2" component="h3" gutterBottom sx={{ marginTop: isMobile ? '20px' : '50px', fontWeight: 'bold', color: theme.palette.text.primary }}>
+                <div style={{ fontSize: 25, color: theme.palette.secondary.main }}>Hi <img src={Hello} alt="Hello" width="25px" />, I'm</div>
                 Wichasin  Sutthiarj
               </Typography>
-              <Typography variant="p" sx={{ fontSize: 30 }}>
+              <Typography variant="p" sx={{ fontSize: 30,color:theme.palette.text.primary }}>
                 <ReactTyped
-                  strings={["Software Engineer","Frontend Developer", "Fullstack Developer"]}
+                  strings={["Software Engineer", "Frontend Developer", "Fullstack Developer"]}
                   typeSpeed={160}
                   backSpeed={100}
                   loop
@@ -47,7 +49,12 @@ function Home() {
 
               </Typography>
               <div >
-                <Button component={Link} to="/resume" variant="contained"   color="primary" sx={{ color: "black", backgroundColor: '#00f496',marginTop:3, p:1.5,paddingLeft:4,paddingRight:4, borderRadius:6, '&:hover': { color: 'black', backgroundColor: "#00e08a" } }}>
+                <Button component={Link} to="/resume" variant="contained"
+                  sx={{
+                    color: "white",
+                    backgroundColor: theme.palette.secondary.main,
+                    marginTop: 3, p: 1.5, paddingLeft: 4, paddingRight: 4, borderRadius: 6, '&:hover': { color: "white", backgroundColor: theme.palette.primary.main }
+                  }}>
                   Resume
                 </Button>
               </div>
