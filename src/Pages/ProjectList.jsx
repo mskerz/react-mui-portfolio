@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Project from '../components/Project';
-import { Container, Typography, Grid } from '@mui/material';
+import { Container, Typography, Grid, useTheme } from '@mui/material';
 import project from '../assets/data.json';
 import { makeStyles } from '@mui/styles';
 
@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
 function ProjectList() {
   const [projects, setProjects] = useState([]);
   const classes = useStyles();
+  const theme = useTheme();
 
   useEffect(() => {
     setProjects(project);
@@ -24,7 +25,7 @@ function ProjectList() {
 
   return (
     <Container className={classes.root}>
-      <Typography variant="h4" component="h1"  gutterBottom sx={{paddingTop:'60px'}}>
+      <Typography variant="h4" component="h1"  gutterBottom sx={{paddingTop:'60px',color:theme.palette.text.primary}}>
         My Projects
       </Typography>
       <Grid container spacing={2}>

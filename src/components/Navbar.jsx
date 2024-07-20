@@ -15,7 +15,7 @@ function Navbar() {
     const { darkMode, toggleTheme } = useThemeContext(); // hook theme 
 
     const theme = useTheme();
-    const isMobilescreen = useMediaQuery(theme.breakpoints.down('md'))
+    const isMobilescreen = useMediaQuery(theme.breakpoints.down('md') || theme.breakpoints.down('sm'));
     useEffect(() => {
         setValue(location.pathname);
     }, [location.pathname])
@@ -36,39 +36,39 @@ function Navbar() {
                         {Logo}
                     </Typography>
                 </Box>
-                <Box sx={{ display: { xs: 'block', md: 'none' }, display: 'flex', alignItems: 'center' }}>
-                    {isMobilescreen && (
-                        <>
-                            <IconButton
-                                size="large"
-                                edge="start"
-                                aria-label="menu"
-                                onClick={handleToggle}
-                                sx={{ color: theme.palette.primary.main, padding: '5px' }} // Adjust padding here
-                            >
-                                {open ? <Close /> : <MenuIcon />}
-                            </IconButton>
-                            <Switch
-                                checked={darkMode}
-                                onChange={toggleTheme}
-                                sx={{
-                                    '& .MuiSwitch-switchBase': {
-                                        color: theme.palette.primary.main,
-                                        '&.Mui-checked': {
-                                            color: theme.palette.primary.main,
-                                        },
-                                        '&.Mui-checked + .MuiSwitch-track': {
-                                            backgroundColor: theme.palette.primary.main,
-                                        },
-                                    },
-                                    '& .MuiSwitch-track': {
-                                        backgroundColor: theme.palette.primary.main,
-                                    },
-                                }}
-                            />
-                        </>
-                    )}
-                </Box>
+                <Box sx={{  display: 'flex', alignItems: 'center' }}>
+    {isMobilescreen && (
+        <>
+            <IconButton
+                size="large"
+                edge="start"
+                aria-label="menu"
+                onClick={handleToggle}
+                sx={{ color: theme.palette.primary.main, padding: '5px' }} // Adjust padding here
+            >
+                {open ? <Close /> : <MenuIcon />}
+            </IconButton>
+            <Switch
+                checked={darkMode}
+                onChange={toggleTheme}
+                sx={{
+                    '& .MuiSwitch-switchBase': {
+                        color: theme.palette.primary.main,
+                        '&.Mui-checked': {
+                            color: theme.palette.primary.main,
+                        },
+                        '&.Mui-checked + .MuiSwitch-track': {
+                            backgroundColor: theme.palette.primary.main,
+                        },
+                    },
+                    '& .MuiSwitch-track': {
+                        backgroundColor: theme.palette.primary.main,
+                    },
+                }}
+            />
+        </>
+    )}
+</Box>
 
 
                 <Box sx={{ display: { xs: 'none', md: 'block' } }}>
@@ -79,12 +79,12 @@ function Navbar() {
                     >
                         <Tab label="Home" value="/" component={Link} to="/" sx={{ color: theme.palette.text.primary, '&.Mui-selected': { color: theme.palette.primary.main }, '&:hover': { color: theme.palette.secondary.main } }} />
                         <Tab label="About" value="/about" component={Link} to="/about" sx={{ color: theme.palette.text.primary, '&.Mui-selected': { color: theme.palette.primary.main }, '&:hover': { color: theme.palette.secondary.main } }} />
-                        <Tab label="Contact" value="/contact" component={Link} to="/contact" sx={{ color: theme.palette.text.primary, '&.Mui-selected': { color: theme.palette.primary.main }, '&:hover': { color: theme.palette.secondary.main } }} />
                         <Tab label="Projects" value="/projects" component={Link} to="/projects" sx={{ color: theme.palette.text.primary, '&.Mui-selected': { color: theme.palette.primary.main }, '&:hover': { color: theme.palette.secondary.main } }} />
+                        <Tab label="Contact" value="/contact" component={Link} to="/contact" sx={{ color: theme.palette.text.primary, '&.Mui-selected': { color: theme.palette.primary.main }, '&:hover': { color: theme.palette.secondary.main } }} />
                         <Tab label="Resume" value="/resume" component={Link} to="/resume" sx={{ color: theme.palette.text.primary, '&.Mui-selected': { color: theme.palette.primary.main }, '&:hover': { color: theme.palette.secondary.main } }} />
                     </Tabs>
                 </Box>
-                {!isMobilescreen && (<Switch checked={darkMode} onChange={toggleTheme} sx={{
+                {!isMobilescreen &&(<Switch checked={darkMode} onChange={toggleTheme} sx={{
                     '& .MuiSwitch-switchBase': {
                         color: theme.palette.primary.main,
                         '&.Mui-checked': {
@@ -102,12 +102,12 @@ function Navbar() {
             </Toolbar>
             {isMobilescreen && (
                 <Collapse in={open} timeout="auto" unmountOnExit sx={{ backgroundColor: theme.palette.background.default }}>
-                    <Box sx={{ display: 'grid', flexDirection: 'row-reverse', alignItems: 'center', backgroundColor: theme.palette.background.default }}>
+                    <Box sx={{ display: 'grid', flexDirection: 'row-reverse', alignItems: 'center', backgroundColor: theme.palette.background.default,alignSelf:"center",justifyContent:"center" }}>
                         <Tabs value={value} onChange={handleChange} aria-label='navigation tabs' orientation="vertical" TabIndicatorProps={{ style: { backgroundColor: theme.palette.primary.main } }}>
                             <Tab label="Home" value="/" component={Link} to="/" sx={{ color: theme.palette.text.primary, '&.Mui-selected': { color: theme.palette.primary.main }, '&:hover': { color: theme.palette.secondary.main } }} />
                             <Tab label="About" value="/about" component={Link} to="/about" sx={{ color: theme.palette.text.primary, '&.Mui-selected': { color: theme.palette.primary.main }, '&:hover': { color: theme.palette.secondary.main } }} />
-                            <Tab label="Contact" value="/contact" component={Link} to="/contact" sx={{ color: theme.palette.text.primary, '&.Mui-selected': { color: theme.palette.primary.main }, '&:hover': { color: theme.palette.secondary.main } }} />
                             <Tab label="Projects" value="/projects" component={Link} to="/projects" sx={{ color: theme.palette.text.primary, '&.Mui-selected': { color: theme.palette.primary.main }, '&:hover': { color: theme.palette.secondary.main } }} />
+                            <Tab label="Contact" value="/contact" component={Link} to="/contact" sx={{ color: theme.palette.text.primary, '&.Mui-selected': { color: theme.palette.primary.main }, '&:hover': { color: theme.palette.secondary.main } }} />
                             <Tab label="Resume" value="/resume" component={Link} to="/resume" sx={{ color: theme.palette.text.primary, '&.Mui-selected': { color: theme.palette.primary.main }, '&:hover': { color: theme.palette.secondary.main } }} />
                         </Tabs>
                     </Box>
