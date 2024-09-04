@@ -1,3 +1,7 @@
+@import "../node_modules/slick-carousel/slick/slick.css";
+@import "../node_modules/slick-carousel/slick/slick-theme.css";
+
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -63,4 +67,19 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+
+/* ติดตั้งไฟล์ CSS สำหรับ react-slick */
+.slick-prev, .slick-next {
+  color: currentColor; /* ใช้สีตามธีม */
+}
+
+/* สำหรับจุดนำทาง */
+.slick-dots li button:before {
+  color: currentColor; /* ใช้สีตามธีม */
+}
+
+.slick-dots li.slick-active button:before {
+  color: #FF0000; /* เปลี่ยนสีของจุดที่เลือก */
 }

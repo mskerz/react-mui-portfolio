@@ -1,11 +1,11 @@
 [
     {
-        "projectName": "Thesis Search of Computer Science's Student",
-        "type": "Graduate Project",
+        "projectName": "Thesis Finder",
+        "type": "Senior Project",
         "subject": "Computer Science Project",
         "detail": {
-            "tools": ["Angular", "FastAPI","Python"],
-            "summary": "Designed and developed an article app (mobile app) with Flutter and Rest API with Laravel MySQL.",
+            "tools": ["Angular", "FastAPI"],
+            "summary": "Web application for a thesis search system for computer science students KU CSC Implements TF-IDF technique in measure word importance relative to search queries, and retrieval of relevant documents and use word processing with PythaiNLP",
             "database": ["MySQL"]
         },
         "source": "https://github.com/mskerz/thesis-search-project"
@@ -33,7 +33,7 @@
         "source": "https://github.com/mskerz/content_manage_apps"
     },
     {
-        "projectName": "Admissions Web Application for undergraduate",
+        "projectName": " Web Application for admissions undergraduate students",
         "type": "Class Project",
         "subject": "Web Technology and Web Service",
         "detail": {
