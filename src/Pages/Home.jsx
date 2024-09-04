@@ -41,7 +41,7 @@ function Home() {
               </Typography>
               <Typography variant="p" sx={{ fontSize: 30,color:theme.palette.text.primary }}>
                 <ReactTyped
-                  strings={["Software Engineer", "Frontend Developer", "Fullstack Developer"]}
+                  strings={["Frontend Developer", "Fullstack Developer"]}
                   typeSpeed={160}
                   backSpeed={100}
                   loop
